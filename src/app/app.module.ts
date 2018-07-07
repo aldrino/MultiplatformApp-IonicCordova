@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
+import { LocalNotifications } from '@ionic-native/local-notifications';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -66,7 +67,8 @@ import { CommentPage } from '../pages/comment/comment';
     PromotionProvider,
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
-    FavoriteProvider
+    FavoriteProvider,
+    LocalNotifications
   ]
 })
 export class AppModule {}
