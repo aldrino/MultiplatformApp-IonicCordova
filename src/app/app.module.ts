@@ -4,6 +4,7 @@ import { HttpModule, Http } from '@angular/http';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { EmailComposer } from '@ionic-native/email-composer';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -68,7 +69,8 @@ import { CommentPage } from '../pages/comment/comment';
     ProcessHttpmsgProvider,
     { provide: 'BaseURL', useValue: baseURL },
     FavoriteProvider,
-    LocalNotifications
+    LocalNotifications,
+    EmailComposer
   ]
 })
 export class AppModule {}
